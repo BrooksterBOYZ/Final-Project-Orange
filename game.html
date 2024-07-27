@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -41,7 +42,8 @@
             transition: color 0.3s ease;
         }
 
-        .navbar a:hover, .navbar .active {
+        .navbar a:hover,
+        .navbar .active {
             color: #ff5722;
         }
 
@@ -51,20 +53,27 @@
             margin: 0 auto;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             text-align: center;
             font-family: 'Playfair Display', serif;
             color: #444;
         }
 
-        #gameImage, #creatureImage {
+        #gameImage,
+        #creatureImage {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        #score, #timer, #hints, #result, #category, #mythicalCreature {
+        #score,
+        #timer,
+        #hints,
+        #result,
+        #category,
+        #mythicalCreature {
             text-align: center;
             margin: 10px 0;
         }
@@ -101,6 +110,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar">
@@ -131,7 +141,7 @@
             <h2>Mythical Creature Earned:</h2>
             <p id="mythicalCreature"></p>
             <div id="creatureInfo"></div> <!-- This is the new element -->
-            <img id="creatureImage" src="" alt="Mythical Creature Image"> 
+            <img id="creatureImage" src="" alt="Mythical Creature Image">
         </div>
     </main>
 
@@ -141,4 +151,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
