@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -33,14 +34,11 @@
             justify-content: center;
         }
 
-        .navbar li {
-            margin: 0 15px;
-        }
-
         .navbar a {
             color: #fff;
             text-decoration: none;
             font-weight: 700;
+            margin: 0 15px;
             transition: color 0.3s ease;
         }
 
@@ -60,53 +58,11 @@
             color: #444;
         }
 
-        .carousel {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .container {
+            padding: 20px;
             background-color: #fff;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .carousel-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-control-prev, .carousel-control-next {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 24px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-
-        .carousel-control-prev:hover, .carousel-control-next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -117,43 +73,24 @@
         }
     </style>
 </head>
+
 <body>
     <header class="header">
-        <nav>
-            <ul class="navbar">
-                <li><a href="store.html" class="active">Store</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="store.html" class="active">Store</a>
+            <a href="game.html">Game</a>
         </nav>
     </header>
 
     <main>
         <section id="store">
             <div class="container">
-                <h1>Our Products Gallery</h1>
-
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img src="https://raw.githubusercontent.com/BrooksterBOYZ/Final-Project-Orange/main/Gemini_Generated_Image_okt6z8okt6z8okt6.jpg" alt="Mythical Picture">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://raw.githubusercontent.com/BrooksterBOYZ/Final-Project-Orange/main/Screenshot%202024-07-27%20at%2010.24%20Background%20Removed.33%E2%80%AFAM.png" alt="Mythical Sweater">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://raw.githubusercontent.com/BrooksterBOYZ/Final-Project-Orange/main/Screenshot%202024-07-27%20at%2010.17.09%E2%80%AFAM.png" alt="Mythical T-Shirt">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://raw.githubusercontent.com/BrooksterBOYZ/Final-Project-Orange/main/Screenshot%202024-07-27%20at%2010-1.25.54%E2%80%AFAM.png" alt="Mythical Poster">
-                        </div>
-                    </div>
-                    <div class="carousel-controls">
-                        <button class="carousel-control-prev">&#10094;</button>
-                        <button class="carousel-control-next">&#10095;</button>
-                    </div>
-                </div>
+                <h1>Our Store</h1>
+                <p>Check out our range of exciting products. Click on the items to learn more or purchase them.</p>
+                <!-- Store items will go here -->
             </div>
         </section>
     </main>
@@ -161,32 +98,8 @@
     <footer class="footer">
         <!-- Footer content goes here -->
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const prevButton = document.querySelector('.carousel-control-prev');
-            const nextButton = document.querySelector('.carousel-control-next');
-            const carouselInner = document.querySelector('.carousel-inner');
-            let index = 0;
-
-            function showSlide(newIndex) {
-                const slides = carouselInner.children.length;
-                if (newIndex >= 0 && newIndex < slides) {
-                    const offset = -newIndex * 100;
-                    carouselInner.style.transform = `translateX(${offset}%)`;
-                    index = newIndex;
-                }
-            }
-
-            prevButton.addEventListener('click', function () {
-                showSlide(index - 1);
-            });
-
-            nextButton.addEventListener('click', function () {
-                showSlide(index + 1);
-            });
-        });
-    </script>
 </body>
+
 </html>
+
 
