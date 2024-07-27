@@ -1,17 +1,18 @@
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Playwrite GB S", cursive;
+  font-family: "Poppins", sans-serif; /* Updated to Poppins for consistency */
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body covers the entire viewport */
+  min-height: 100vh;
 }
 
 .header {
-  background-color: #d6d6d6;
-  padding: 20px 0;
-  color: #fff;
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 10px 0;
+  color: #333;
   text-align: center;
 }
 
@@ -21,94 +22,93 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 15px; /* Add spacing between navigation links */
+  gap: 15px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #000000;
-  padding: 15px 20px; /* Adjust padding for better visual balance */
+  color: #333;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s;
-  background-color: #fff; /* White background for better contrast */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  background-color: #7a7a7a;
-  color: #fff; /* White text for better readability on hover */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #fff;
 }
 
-/* Additional styles for the game */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Main Content */
 main {
-  flex-grow: 1; /* Allow main section to fill the remaining space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
   padding: 20px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific Styles for Game Page */
 #game {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 80%;
-  max-width: 600px; /* Limit the width of the game container */
 }
 
 #game h1 {
-  color: #333;
   margin-bottom: 20px;
 }
 
-#gameContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-#score, #timer, #hints, #category {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #333;
-}
-
 #userInput {
-  margin-top: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  max-width: 300px; /* Limit input field width */
+  max-width: 300px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-  max-width: 300px; /* Limit button width */
-}
-
-button:hover {
-  background-color: #555;
-}
-
-#result {
-  margin-top: 10px;
-  font-size: 1.3em;
-  color: #333;
-}
-
+/* Mythical Creature Section */
 #mythicalCreatureSection {
   margin-top: 20px;
   border: 1px solid #ccc;
@@ -118,58 +118,77 @@ button:hover {
   text-align: center;
 }
 
-/* Styles for the About Us page */
-.about {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container h1 {
-  color: #333;
-}
-
-.container p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Style for the footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Additional styling for the game section */
-#gameSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-#mythicalCreature {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Image placeholder - Replace with actual image URLs */
 #mythicalCreatureSection img {
   max-width: 100%;
   height: auto;
   margin-top: 10px;
 }
-  .profile-image {
-    width: 200px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Round the corners */
-    margin-bottom: 10px; /* Add some spacing below the image */
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
+
+  .navbar a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
