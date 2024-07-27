@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="store.html">Store</a>
+            <a href="game.html" id="gameLink" class="active">Game</a>
+        </nav>
+    </header>
+
+    <main id="gameSection">
+        <div id="game">
+            <h1>Country Guessing Game</h1>
+            <img id="gameImage" src="images.jpeg" alt="Game Image">
+            <p id="score">Score: 0</p>
+            <p id="timer">Time: 45</p>
+            <p>Guess the Country based on hints:</p>
+            <p id="hints">Hint: </p>
+            <input type="text" id="userInput" placeholder="Enter your guess">
+            <button onclick="checkGuess()">Check</button>
+            <p id="result"></p>
+            <p id="category"></p>
+            <div id="gameContent"></div>
+            <button id="nextButton" onclick="nextRound()" style="display: none;">Next</button>
+        </div>
+
+        <div id="mythicalCreatureSection" style="display: block;">
+            <h2>Mythical Creature Earned:</h2>
+            <p id="mythicalCreature"></p>
+            <div id="creatureInfo"></div>
+            <img id="creatureImage" src="" alt="Mythical Creature Image">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
 
